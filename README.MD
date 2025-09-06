@@ -16,6 +16,7 @@ It lets you list every version of a private Zendesk app and download the full so
 
 ## Folder / File Map
 
+```bash
 zendesk-app-downloader/
 ├─ manifest.json // extension manifest (v3)
 ├─ messenger.js // page-context helper (captures cookies & headers)
@@ -24,6 +25,7 @@ zendesk-app-downloader/
 ├─ styles.css // popup styling
 ├─ jszip.min.js // ZIP library (drop-in file)
 └─ icons/ // Icons of application
+```
 
 ---
 
