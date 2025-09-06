@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Zendesk App Downloader",
+  "version": "1.0.0",
+  "description": "Download app versions from Zendesk admin panel",
+  "permissions": ["activeTab", "cookies", "storage", "scripting"],
+  "host_permissions": ["https://*.zendesk.com/*"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.zendesk.com/admin/apps-integrations/apps/app-builder/*"
+      ],
+      "js": ["messenger.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png",
+      "256": "icons/icon-256.png",
+      "512": "icons/icon-512.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png",
+    "512": "icons/icon-512.png"
+  }
+}
