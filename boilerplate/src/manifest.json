@@ -1,0 +1,61 @@
+{
+  "name": "App Builder App",
+  "author": {
+    "name": "Nischal Pokharel",
+    "email": "hello@saaspal.us"
+  },
+  "defaultLocale": "en",
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "http://localhost:3000",
+        "flexible": true
+      },
+      "new_ticket_sidebar": {
+        "url": "http://localhost:3000",
+        "flexible": true
+      }
+    }
+  },
+  "version": "1.0",
+  "frameworkVersion": "2.0",
+  "domainWhitelist": [],
+  "parameters": [
+    {
+      "name": "grokApiKey",
+      "type": "text",
+      "secure": true,
+      "required": false
+    },
+    {
+      "name": "geminiApiKey",
+      "type": "text",
+      "secure": true,
+      "required": false
+    },
+    {
+      "name": "selectedModel",
+      "type": "text",
+      "required": false,
+      "default": "grok"
+    },
+    {
+      "name": "autoStartPromptId",
+      "type": "text",
+      "required": false,
+      "default": ""
+    },
+    {
+      "name": "autoStartEnabled",
+      "type": "text",
+      "required": false,
+      "default": false
+    },
+    {
+      "name": "savedPrompts",
+      "type": "text",
+      "required": false,
+      "default": "[]"
+    }
+  ]
+}
