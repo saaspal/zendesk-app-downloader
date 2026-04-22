@@ -47,7 +47,7 @@ async function loadVersions() {
 
   if (!j.versions || !j.versions.length) throw new Error("No versions.");
   populateSelect(j.versions);
-  statusEl.textContent = "Choose a version:";
+  statusEl.innerHTML = `${j.versions[0] ? "Choose a version for the app : <strong>"+j.versions[0].title+"</strong>" : "Please visit an app page"}`;
   versionBox.hidden = false;
 }
 
@@ -56,9 +56,7 @@ function populateSelect(versions) {
   versions.forEach((v, i) => {
     const opt = document.createElement("option");
     opt.value = v.versionId;
-    opt.textContent = `${v.title}  –  ${new Date(
-      v.createdAt
-    ).toLocaleString()} ${i === 0 ? "(latest)" : ""}`;
+    opt.textContent = `Version ${versions.length - i} ${i === 0 ? "(latest)" : ""}`;
     versionSel.appendChild(opt);
   });
   versionSel.selectedIndex = 0;
