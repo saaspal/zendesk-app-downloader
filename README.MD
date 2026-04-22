@@ -24,6 +24,7 @@ zendesk-app-downloader/
 ├─ popup.js // all download logic lives here
 ├─ styles.css // popup styling
 ├─ jszip.min.js // ZIP library (drop-in file)
+├─ boilerplate/ // Scaffold files merged for Advanced Download
 └─ icons/ // Icons of application
 ```
 
